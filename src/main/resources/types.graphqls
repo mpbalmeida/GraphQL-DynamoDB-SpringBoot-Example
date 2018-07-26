@@ -1,0 +1,21 @@
+type Query {
+    books: [Book!]
+}
+
+type Book {
+    id: ID!
+    name: String!
+    author: Author!
+    description: String
+}
+
+type Author {
+    id: ID!
+    name: String!
+    description: String @constraint(minLength: 3)
+}
+
+type Mutation {
+    createAuthor(name: String!, description: String) : Author!
+}
+
