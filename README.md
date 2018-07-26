@@ -1,0 +1,1 @@
+graphql-dynamodb-spring-example
